@@ -1,0 +1,5 @@
+name: get-subnets-test
+runtime:
+  name: python
+config:
+  aws:region: us-east-1
