@@ -6,7 +6,7 @@ default_vpc = ec2.DefaultVpc("default")
 res = ec2.get_subnets(
     filters=[
         ec2.GetSubnetsFilterArgs(name="vpc-id", values=[default_vpc.id]),
-        ec2.GetSubnetsFilterArgs(name="map-public-ip-on-launch", values=[True]),
+        ec2.GetSubnetsFilterArgs(name="map-public-ip-on-launch", values=["true"]),
     ]
 )
 pulumi.export("vpc-ids", res.ids)
